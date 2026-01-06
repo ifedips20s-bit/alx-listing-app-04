@@ -1,0 +1,31 @@
+{
+  "properties": [
+    {
+      "id": 1,
+      "name": "Beach Villa",
+      "price": 7500,
+      "image": "https://example.com/villa.jpg",
+      "location": "Ibiza, Spain",
+      "rating": 4.8,
+      "reviewsCount": 120
+    },
+    {
+      "id": 2,
+      "name": "Mountain Cabin",
+      "price": 5000,
+      "image": "https://example.com/cabin.jpg",
+      "location": "Alps, Switzerland",
+      "rating": 4.6,
+      "reviewsCount": 80
+    },
+    {
+      "id": 3,
+      "name": "City Apartment",
+      "price": 3500,
+      "image": "https://example.com/apartment.jpg",
+      "location": "New York, USA",
+      "rating": 4.7,
+      "reviewsCount": 200
+    }
+  ]
+}
