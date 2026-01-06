@@ -2,6 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import PropertyDetail from "@/components/property/PropertyDetail";
+import ReviewSection from "@/components/property/ReviewSection";
 
 export default function PropertyDetailPage() {
   const router = useRouter();
@@ -15,7 +16,6 @@ export default function PropertyDetailPage() {
     const fetchProperty = async () => {
       if (!id) return; // wait for router to provide the ID
       try {
-        // Replace with your API URL
         const response = await axios.get(`http://localhost:3001/properties/${id}`);
         setProperty(response.data);
       } catch (err) {
@@ -33,5 +33,13 @@ export default function PropertyDetailPage() {
   if (error) return <p className="text-red-500">{error}</p>;
   if (!property) return <p>Property not found.</p>;
 
-  return <PropertyDetail property={property} />;
+  return (
+    <div className="container mx-auto p-6">
+      {/* Property details */}
+      <PropertyDetail property={property} />
+
+      {/* Reviews section */}
+      <ReviewSection propertyId={property.id} />
+    </div>
+  );
 }
